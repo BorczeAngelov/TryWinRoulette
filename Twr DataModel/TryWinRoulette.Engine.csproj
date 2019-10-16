@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Component\BetFactory.cs" />
-    <Compile Include="Component\BetInterpreter.cs" />
     <Compile Include="Component\TrueRandom.cs" />
     <Compile Include="Component\RandomGenerator.cs" />
     <Compile Include="Interface\BetInterfaces.cs" />

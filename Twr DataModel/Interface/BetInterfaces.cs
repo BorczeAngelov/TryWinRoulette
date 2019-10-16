@@ -28,6 +28,9 @@ namespace TryWinRoulette.Engine.Interface
 
     public interface IBetInterpreter
     {
-
+        IRollTemplate LastRoll { get; }
+        void MoveToNext();
+        void MoveToPrevious();
+        void JumpTo(int rollIndex);
     }
 }

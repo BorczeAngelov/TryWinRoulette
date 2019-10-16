@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
 
 namespace TryWinRoulette.Engine.Interface
 {
@@ -7,6 +6,11 @@ namespace TryWinRoulette.Engine.Interface
     {
         int MaxValue { get; }
         IRollTemplatesPool RollTemplatesPool { get; }
+
+        IRollTemplate CurrentRoll { get; }
+        IRollTemplate MoveToNext();
+        IRollTemplate MoveToPrevious();
+        IRollTemplate JumpTo(int index);
     }
 
     public interface IBasicAnalyser<Input, Output>
