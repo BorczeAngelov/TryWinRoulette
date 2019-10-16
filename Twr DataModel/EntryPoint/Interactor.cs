@@ -5,11 +5,11 @@ namespace TryWinRoulette.Engine.Interactor
 {
     public class Interactor
     {
-        public IRouletteRolls GenerateRolls(int maxNumber, ulong rolls)
+        public IRouletteRolls GenerateRolls(RouletteStyle rouletteStyle, ulong rolls)
         {
             var randomGenerator = new RandomGenerator();           
 
-            var rouletteRolls = randomGenerator.GenerateRouletteRolls(maxNumber, rolls);
+            var rouletteRolls = randomGenerator.GenerateRouletteRolls(rouletteStyle, rolls);
             return rouletteRolls;
         }
                 

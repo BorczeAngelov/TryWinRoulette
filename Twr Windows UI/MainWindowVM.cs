@@ -50,7 +50,7 @@ namespace Twr_Windows_UI
 
         internal void GenerateRolls()
         {
-            int maxNumber = 36;
+            
             RouletteRolls = _interactor.GenerateRolls(maxNumber, RollsToBeGenerated);
         }
 

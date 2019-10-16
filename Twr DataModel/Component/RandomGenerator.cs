@@ -5,8 +5,9 @@ namespace TryWinRoulette.Engine.Component
 {
     class RandomGenerator
     {
-        internal IRouletteRolls GenerateRouletteRolls(int maxValue, ulong rolls)
+        internal IRouletteRolls GenerateRouletteRolls(RouletteStyle rouletteStyle, ulong rolls)
         {
+            int maxValue = 36;
             var rollUnitsPool = new RollTemplatesPool(maxValue);
             var rouletteRolls = new RouletteRolls(rollUnitsPool);
 

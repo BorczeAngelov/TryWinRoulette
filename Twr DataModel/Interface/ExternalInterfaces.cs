@@ -49,4 +49,10 @@ namespace TryWinRoulette.Engine.Interface
         int PossibleProfit { get; }
         bool IsWin(IRollTemplate input);
     }
+
+    public enum RouletteStyle
+    {
+        European,
+        American
+    }
 }
