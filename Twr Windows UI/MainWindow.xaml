@@ -4,9 +4,100 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Twr_Windows_UI"
+        xmlns:component="clr-namespace:Twr_Windows_UI.Component"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        Height="450"
+        Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.RowSpan="2"
+              Grid.Column="1">
+            <ItemsControl ItemsSource="{Binding BasicStatistics}"
+                          BorderThickness="5"
+                          BorderBrush="Black">
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border HorizontalAlignment="Left">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="5" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="5" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <component:RollTemplate DataContext="{Binding RollTemplate}" />
+
+                                <TextBlock Text="{Binding Hits}"
+                                           VerticalAlignment="Center"
+                                           Grid.Column="2" />
+
+                                <TextBlock Text="{Binding Probability, StringFormat={}{0:#0.00'%'}}"
+                                           VerticalAlignment="Center"
+                                           Grid.Column="4" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+        </ScrollViewer>
+
+        <ItemsControl Grid.Row="0"
+                      ItemsSource="{Binding RouletteRolls}"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      ScrollViewer.CanContentScroll="True">
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.Template>
+                <ControlTemplate>
+                    <Border SnapsToDevicePixels="True">
+                        <ScrollViewer HorizontalScrollBarVisibility="Visible"
+                                      Focusable="False">
+                            <ItemsPresenter />
+                        </ScrollViewer>
+                    </Border>
+                </ControlTemplate>
+            </ItemsControl.Template>
+
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <component:RollTemplate />
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <DockPanel Margin="5"
+                   Grid.Row="2">
+
+
+            <Button Content="Generate Roulette Rolls"
+                    HorizontalAlignment="Left"
+                    Click="OnGenerateRouletteRollsClick"
+                    DockPanel.Dock="Right" />
+
+            <TextBox Text="{Binding RollsToBeGenerated}"
+                     HorizontalContentAlignment="Right"
+                     Margin="5,0" />
+
+        </DockPanel>
     </Grid>
 </Window>

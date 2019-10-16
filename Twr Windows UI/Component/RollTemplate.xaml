@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Twr_Windows_UI.Component.RollTemplate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Twr_Windows_UI.Component"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             xmlns:IRollTemplate="clr-namespace:TryWinRoulette.DataModel.Interface;assembly=TryWinRoulette.DataModel">
+
+    <Border Width="25"
+            Height="25"
+            BorderThickness="1"
+            BorderBrush="BlueViolet"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Padding="3">
+        <Border.Style>
+            <Style TargetType="Border">
+                <Style.Triggers>
+
+                    <DataTrigger Binding="{Binding Color}"
+                                 Value="{x:Static IRollTemplate:RollColor.Green}">
+                        <Setter Property="Background"
+                                Value="Green" />
+                    </DataTrigger>
+
+                    <DataTrigger Binding="{Binding Color}"
+                                 Value="{x:Static IRollTemplate:RollColor.Red}">
+                        <Setter Property="Background"
+                                Value="Red" />
+                    </DataTrigger>
+
+                    <DataTrigger Binding="{Binding Color}"
+                                 Value="{x:Static IRollTemplate:RollColor.Black}">
+                        <Setter Property="Background"
+                                Value="Black" />
+                    </DataTrigger>
+
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
+
+        <TextBlock Text="{Binding Value}"
+                   Foreground="White"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
+    </Border>
+</UserControl>

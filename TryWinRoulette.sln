@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twr Windows UI", "Twr Windows UI\Twr Windows UI.csproj", "{F5DED10C-921A-4F12-8DBC-4A7F5DA6E2A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryWinRoulette.WindowsUI", "Twr Windows UI\TryWinRoulette.WindowsUI.csproj", "{F5DED10C-921A-4F12-8DBC-4A7F5DA6E2A7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8} = {A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryWinRoulette.DataModel", "Twr DataModel\TryWinRoulette.DataModel.csproj", "{A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{F5DED10C-921A-4F12-8DBC-4A7F5DA6E2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5DED10C-921A-4F12-8DBC-4A7F5DA6E2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5DED10C-921A-4F12-8DBC-4A7F5DA6E2A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
