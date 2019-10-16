@@ -1,5 +1,4 @@
 ﻿using TryWinRoulette.DataModel.Interface;
-using TryWinRoulette.DataModel.Logic;
 
 namespace TryWinRoulette.DataModel.Component
 {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace TryWinRoulette.DataModel.Interface
+﻿namespace TryWinRoulette.DataModel.Interface
 {
     internal interface IStatisticGenerator<T>
     {
