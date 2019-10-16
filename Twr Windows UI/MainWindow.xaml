@@ -19,50 +19,10 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ScrollViewer Grid.RowSpan="2"
-                      Grid.Column="1">
-            
-            <DataGrid ItemsSource="{Binding BasicStatistics}"
-                      AutoGenerateColumns="False"
-                      CanUserAddRows="False"
-                      CanUserResizeRows="False"
-                      >
-
-                <DataGrid.Columns>
-                    <DataGridTemplateColumn >
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <component:RollTemplate DataContext="{Binding RollTemplate}" 
-                                                       CustomWidthAndHeight="20"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-
-                    <DataGridTemplateColumn Header="Hits"
-                                            CanUserSort="True">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Hits}"
-                                           VerticalAlignment="Center" 
-                                           HorizontalAlignment="Center"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-
-                    <DataGridTemplateColumn Header="Probability">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Probability, StringFormat={}{0:#0.00'%'}}"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="Center"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-
-                </DataGrid.Columns>
-            </DataGrid>
-
-        </ScrollViewer>
+        <Grid Grid.RowSpan="2"
+              Grid.Column="1">
+            <component:Statistics BasicStatistics="{Binding BasicStatistics}"/>
+        </Grid>
 
         <ItemsControl Grid.Row="0"
                       ItemsSource="{Binding RouletteRolls}"

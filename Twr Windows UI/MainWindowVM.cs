@@ -64,7 +64,7 @@ namespace Twr_Windows_UI
             var redBet = _betFactory.CreateRedBlack(isRed: true);
             redBet.Chips = 100;
 
-            IRollTemplate input = RouletteRolls[0];
+            IRollTemplate input = RouletteRolls.MoveToNext();
             var isW = redBet.IsWin(input);
         }
 
