@@ -50,8 +50,7 @@ namespace Twr_Windows_UI
 
         internal void GenerateRolls()
         {
-            
-            RouletteRolls = _interactor.GenerateRolls(maxNumber, RollsToBeGenerated);
+            RouletteRolls = _interactor.GenerateRolls(RouletteStyle.European, RollsToBeGenerated);
         }
 
         internal void GenerateBasicStatistics()

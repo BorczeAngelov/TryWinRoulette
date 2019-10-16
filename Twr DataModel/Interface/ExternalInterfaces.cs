@@ -32,24 +32,6 @@ namespace TryWinRoulette.Engine.Interface
         void RegisterHit();
     }
 
-    public interface IBetFactory
-    {
-        IBet CreateRedBlack(bool isRed);
-    }
-
-    public interface ICompleteBet : ICollection<IBet>
-    {
-
-    }
-
-    public interface IBet : INotifyPropertyChanged
-    {
-        int Chips { get; set; }
-        int PossibleReturn { get; }
-        int PossibleProfit { get; }
-        bool IsWin(IRollTemplate input);
-    }
-
     public enum RouletteStyle
     {
         European,
