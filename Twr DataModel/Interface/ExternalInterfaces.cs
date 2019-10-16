@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace TryWinRoulette.DataModel.Interface
-{   
+{
     public interface IRouletteRolls : IReadOnlyList<IRollTemplate>
     {
         int MaxValue { get; }
@@ -31,4 +32,21 @@ namespace TryWinRoulette.DataModel.Interface
         void RegisterHit();
     }
 
+    public interface IBetFactory
+    {
+        IBet CreateRedBlack(bool isRed);
+    }
+
+    public interface ICompleteBet : ICollection<IBet>
+    {
+
+    }
+
+    public interface IBet : INotifyPropertyChanged
+    {
+        int Chips { get; set; }
+        int PossibleReturn { get; }
+        int PossibleProfit { get; }
+        bool IsWin(IRollTemplate input);
+    }
 }

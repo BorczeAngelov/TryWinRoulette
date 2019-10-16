@@ -10,11 +10,13 @@ namespace TryWinRoulette.DataModel.Component
             var rollUnitsPool = new RollTemplatesPool(maxValue);
             var rouletteRolls = new RouletteRolls(rollUnitsPool);
 
-            var dotNetRandom = new TrueRandom();
-            for (ulong i = 0; i < rolls; i++)
+            using (var dotNetRandom = new TrueRandom())
             {
-                var randomNumber = dotNetRandom.Next(maxValue);
-                rouletteRolls.Add(randomNumber);
+                for (ulong i = 0; i < rolls; i++)
+                {
+                    var randomNumber = dotNetRandom.Next(maxValue);
+                    rouletteRolls.Add(randomNumber);
+                }
             }
             return rouletteRolls;
         }

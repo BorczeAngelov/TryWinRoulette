@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace Twr_Windows_UI
 {
@@ -20,6 +21,6 @@ namespace Twr_Windows_UI
         {
             _mainWindowVM.GenerateRolls();
             _mainWindowVM.GenerateBasicStatistics();
-        }
+        }        
     }
 }

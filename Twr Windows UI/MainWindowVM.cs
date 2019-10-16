@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel;
-using TryWinRoulette.DataModel.EntryPoint;
+using TryWinRoulette.DataModel.Interactor;
 using TryWinRoulette.DataModel.Interface;
 
 namespace Twr_Windows_UI
@@ -8,14 +8,16 @@ namespace Twr_Windows_UI
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private readonly Runner _runner;
+        private readonly Interactor _interactor;
+        private readonly IBetFactory _betFactory;
 
         private IRouletteRolls _rouletteRolls;
         private IBasicStatistics _basicStatistics;
 
         public MainWindowVM()
         {
-            _runner = new Runner();
+            _interactor = new Interactor();
+            _betFactory = _interactor.CreateBetFactory();
         }
 
         public ulong RollsToBeGenerated { get; set; }
@@ -49,13 +51,24 @@ namespace Twr_Windows_UI
         internal void GenerateRolls()
         {
             int maxNumber = 36;
-            RouletteRolls = _runner.GenerateRolls(maxNumber, RollsToBeGenerated);
+            RouletteRolls = _interactor.GenerateRolls(maxNumber, RollsToBeGenerated);
         }
 
         internal void GenerateBasicStatistics()
         {
-            BasicStatistics = _runner.AnaliseRools(RouletteRolls);
+            BasicStatistics = _interactor.AnaliseRools(RouletteRolls);
+            BetDemo();
         }
+
+        private void BetDemo()
+        {
+            var redBet = _betFactory.CreateRedBlack(isRed: true);
+            redBet.Chips = 100;
+
+            IRollTemplate input = RouletteRolls[0];
+            var isW = redBet.IsWin(input);
+        }
+
 
         private void OnPropertyChanged(string propertyName)
         {
