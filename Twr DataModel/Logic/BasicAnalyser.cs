@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using TryWinRoulette.DataModel.Interface;
+﻿using TryWinRoulette.DataModel.Interface;
 using TryWinRoulette.DataModel.Model;
 
 namespace TryWinRoulette.DataModel.Logic
@@ -25,8 +23,7 @@ namespace TryWinRoulette.DataModel.Logic
             foreach (var rollValue in _rouletteRolls)
             {
                 _basicStatisticUnits[rollValue.Value].RegisterHit();
-            }
-            
+            }            
         }
     }
 }
