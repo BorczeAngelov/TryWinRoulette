@@ -13,7 +13,7 @@ namespace TryWinRoulette.Engine.Interactor
             return rouletteRolls;
         }
                 
-        public IBasicStatistics AnaliseRools(IRouletteRolls rouletteRolls)
+        public IBasicStatistics AnaliseRolls(IRouletteRolls rouletteRolls)
         {
             var statistic = new StatisticGenerator().Analise(rouletteRolls);
             return statistic;

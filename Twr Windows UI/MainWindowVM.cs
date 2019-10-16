@@ -55,7 +55,7 @@ namespace Twr_Windows_UI
 
         internal void GenerateBasicStatistics()
         {
-            BasicStatistics = _interactor.AnaliseRools(RouletteRolls);
+            BasicStatistics = _interactor.AnaliseRolls(RouletteRolls);
             BetDemo();
         }
 
