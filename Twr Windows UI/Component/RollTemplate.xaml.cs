@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Twr_Windows_UI.Component
 {
@@ -20,9 +8,20 @@ namespace Twr_Windows_UI.Component
     /// </summary>
     public partial class RollTemplate : UserControl
     {
+        private const double DefaultCustomWidthAndHeight = 25;
+
         public RollTemplate()
         {
             InitializeComponent();
         }
+
+        public double CustomWidthAndHeight
+        {
+            get { return (double)GetValue(CustomWidthAndHeightProperty); }
+            set { SetValue(CustomWidthAndHeightProperty, value); }
+        }
+
+        public static readonly DependencyProperty CustomWidthAndHeightProperty =
+            DependencyProperty.Register("CustomWidthAndHeight", typeof(double), typeof(RollTemplate), new PropertyMetadata(DefaultCustomWidthAndHeight));
     }
 }

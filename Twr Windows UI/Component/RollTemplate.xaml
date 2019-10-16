@@ -3,18 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:IRollTemplate="clr-namespace:TryWinRoulette.DataModel.Interface;assembly=TryWinRoulette.DataModel"
              xmlns:local="clr-namespace:Twr_Windows_UI.Component"
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="800"
-             xmlns:IRollTemplate="clr-namespace:TryWinRoulette.DataModel.Interface;assembly=TryWinRoulette.DataModel">
+             VerticalAlignment="Center"
+             HorizontalAlignment="Center"
+             Height="{Binding CustomWidthAndHeight, RelativeSource={RelativeSource Self}}"
+             Width="{Binding CustomWidthAndHeight, RelativeSource={RelativeSource Self}}">
 
-    <Border Width="25"
-            Height="25"
-            BorderThickness="1"
+    <Border BorderThickness="1"
             BorderBrush="BlueViolet"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
             Padding="3">
         <Border.Style>
             <Style TargetType="Border">
