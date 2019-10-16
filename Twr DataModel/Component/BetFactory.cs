@@ -1,7 +1,7 @@
-﻿using TryWinRoulette.DataModel.Interface;
-using TryWinRoulette.DataModel.Model.Bet.OutsideBet;
+﻿using TryWinRoulette.Engine.Interface;
+using TryWinRoulette.Engine.DataModel.Bet.OutsideBet;
 
-namespace TryWinRoulette.DataModel.Component
+namespace TryWinRoulette.Engine.Component
 {
     internal class BetFactory : IBetFactory
     {

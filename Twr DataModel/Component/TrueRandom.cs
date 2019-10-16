@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-namespace TryWinRoulette.DataModel.Component
+namespace TryWinRoulette.Engine.Component
 {
     internal class TrueRandom : IDisposable
     {

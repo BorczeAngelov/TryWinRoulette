@@ -1,4 +1,4 @@
-﻿namespace TryWinRoulette.DataModel.Interface
+﻿namespace TryWinRoulette.Engine.Interface
 {
     internal interface IStatisticGenerator<T>
     {

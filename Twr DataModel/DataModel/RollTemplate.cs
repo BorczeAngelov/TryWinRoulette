@@ -1,6 +1,6 @@
-﻿using TryWinRoulette.DataModel.Interface;
+﻿using TryWinRoulette.Engine.Interface;
 
-namespace TryWinRoulette.DataModel.Model
+namespace TryWinRoulette.Engine.DataModel
 {
     internal class RollTemplate : IRollTemplate
     {

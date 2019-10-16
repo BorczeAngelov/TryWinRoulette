@@ -1,7 +1,7 @@
-﻿using TryWinRoulette.DataModel.Interface;
-using TryWinRoulette.DataModel.Model.Utility;
+﻿using TryWinRoulette.Engine.Interface;
+using TryWinRoulette.Engine.DataModel.Utility;
 
-namespace TryWinRoulette.DataModel.Model.Bet.OutsideBet
+namespace TryWinRoulette.Engine.DataModel.Bet.OutsideBet
 {
     class RedBlack : INotifyPropertyChangedImp, IBet
     {

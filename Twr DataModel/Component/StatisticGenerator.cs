@@ -1,6 +1,6 @@
-﻿using TryWinRoulette.DataModel.Interface;
+﻿using TryWinRoulette.Engine.Interface;
 
-namespace TryWinRoulette.DataModel.Component
+namespace TryWinRoulette.Engine.Component
 {
     internal class StatisticGenerator : IStatisticGenerator<IBasicStatistics>
     {

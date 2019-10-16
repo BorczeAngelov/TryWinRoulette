@@ -103,9 +103,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Twr DataModel\TryWinRoulette.DataModel.csproj">
+    <ProjectReference Include="..\Twr DataModel\TryWinRoulette.Engine.csproj">
       <Project>{a7c6fad4-3cf8-4ce6-9b2e-0c7585fe1dd8}</Project>
-      <Name>TryWinRoulette.DataModel</Name>
+      <Name>TryWinRoulette.Engine</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>

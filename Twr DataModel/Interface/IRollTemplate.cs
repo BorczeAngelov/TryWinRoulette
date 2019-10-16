@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TryWinRoulette.DataModel.Interface
+namespace TryWinRoulette.Engine.Interface
 {
     public interface IRollTemplate
     {

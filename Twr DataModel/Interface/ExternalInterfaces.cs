@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace TryWinRoulette.DataModel.Interface
+namespace TryWinRoulette.Engine.Interface
 {
     public interface IRouletteRolls : IReadOnlyList<IRollTemplate>
     {

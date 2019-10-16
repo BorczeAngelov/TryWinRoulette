@@ -1,7 +1,7 @@
-﻿using TryWinRoulette.DataModel.Component;
-using TryWinRoulette.DataModel.Interface;
+﻿using TryWinRoulette.Engine.Component;
+using TryWinRoulette.Engine.Interface;
 
-namespace TryWinRoulette.DataModel.Interactor
+namespace TryWinRoulette.Engine.Interactor
 {
     public class Interactor
     {

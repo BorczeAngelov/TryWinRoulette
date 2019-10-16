@@ -45,18 +45,18 @@
     <Compile Include="Component\TrueRandom.cs" />
     <Compile Include="Component\RandomGenerator.cs" />
     <Compile Include="Interface\IRollTemplate.cs" />
-    <Compile Include="Model\Bet\OutsideBet\RedBlack.cs" />
-    <Compile Include="Model\RollTemplatesPool.cs" />
+    <Compile Include="DataModel\Bet\OutsideBet\RedBlack.cs" />
+    <Compile Include="DataModel\RollTemplatesPool.cs" />
     <Compile Include="Component\StatisticGenerator.cs" />
     <Compile Include="EntryPoint\Interactor.cs" />
     <Compile Include="Interface\ExternalInterfaces.cs" />
     <Compile Include="Interface\InternalInterfaces.cs" />
     <Compile Include="Component\BasicAnalyser.cs" />
-    <Compile Include="Model\BasicStatistics.cs" />
-    <Compile Include="Model\BasicStatisticUnit.cs" />
-    <Compile Include="Model\RollTemplate.cs" />
-    <Compile Include="Model\RouletteRolls.cs" />
-    <Compile Include="Model\Utility\INotifyPropertyChangedImp.cs" />
+    <Compile Include="DataModel\BasicStatistics.cs" />
+    <Compile Include="DataModel\BasicStatisticUnit.cs" />
+    <Compile Include="DataModel\RollTemplate.cs" />
+    <Compile Include="DataModel\RouletteRolls.cs" />
+    <Compile Include="DataModel\Utility\INotifyPropertyChangedImp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

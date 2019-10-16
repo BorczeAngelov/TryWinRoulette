@@ -1,7 +1,7 @@
-﻿using TryWinRoulette.DataModel.Interface;
-using TryWinRoulette.DataModel.Model;
+﻿using TryWinRoulette.Engine.Interface;
+using TryWinRoulette.Engine.DataModel;
 
-namespace TryWinRoulette.DataModel.Component
+namespace TryWinRoulette.Engine.Component
 {
     internal class BasicAnalyser : IBasicAnalyser<IRouletteRolls, IBasicStatistics>
     {

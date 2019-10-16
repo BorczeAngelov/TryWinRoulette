@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
-using TryWinRoulette.DataModel.Interactor;
-using TryWinRoulette.DataModel.Interface;
+using TryWinRoulette.Engine.Interactor;
+using TryWinRoulette.Engine.Interface;
 
 namespace Twr_Windows_UI
 {

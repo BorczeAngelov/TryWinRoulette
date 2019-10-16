@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using TryWinRoulette.DataModel.Interface;
+using TryWinRoulette.Engine.Interface;
 
-namespace TryWinRoulette.DataModel.Model
+namespace TryWinRoulette.Engine.DataModel
 {
     internal class RouletteRolls : List<IRollTemplate>, IRouletteRolls
     {

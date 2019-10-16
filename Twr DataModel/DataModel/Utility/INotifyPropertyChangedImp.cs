@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace TryWinRoulette.DataModel.Model.Utility
+namespace TryWinRoulette.Engine.DataModel.Utility
 {
     internal class INotifyPropertyChangedImp : INotifyPropertyChanged
     {

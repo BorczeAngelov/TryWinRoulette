@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryWinRoulette.WindowsUI", 
 		{A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8} = {A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryWinRoulette.DataModel", "Twr DataModel\TryWinRoulette.DataModel.csproj", "{A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryWinRoulette.Engine", "Twr DataModel\TryWinRoulette.Engine.csproj", "{A7C6FAD4-3CF8-4CE6-9B2E-0C7585FE1DD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

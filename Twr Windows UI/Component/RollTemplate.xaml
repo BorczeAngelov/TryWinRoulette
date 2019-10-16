@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:IRollTemplate="clr-namespace:TryWinRoulette.DataModel.Interface;assembly=TryWinRoulette.DataModel"
+             xmlns:IRollTemplate="clr-namespace:TryWinRoulette.Engine.Interface;assembly=TryWinRoulette.DataModel"
              xmlns:local="clr-namespace:Twr_Windows_UI.Component"
              mc:Ignorable="d"
              d:DesignHeight="450"
