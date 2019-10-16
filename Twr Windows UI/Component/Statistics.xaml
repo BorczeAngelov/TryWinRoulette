@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid ItemsSource="{Binding BasicStatistics, RelativeSource={RelativeSource AncestorType=local:Statistics}}"
+        <DataGrid ItemsSource="{Binding BasicStatistics, RelativeSource={RelativeSource AncestorType=UserControl}}"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   CanUserResizeRows="False">

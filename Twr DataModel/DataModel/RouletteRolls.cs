@@ -10,12 +10,12 @@ namespace TryWinRoulette.Engine.DataModel
 
         public int MaxValue { get => RollTemplatesPool.MaxValue; }
 
+        public IRollTemplate CurrentRoll { get; private set; }
+
         public RouletteRolls(IRollTemplatesPool rollTemplatesPool)
         {
             RollTemplatesPool = rollTemplatesPool;
         }
-
-        public IRollTemplate CurrentRoll { get; private set; }
 
         internal void Add(int randomNumber)
         {

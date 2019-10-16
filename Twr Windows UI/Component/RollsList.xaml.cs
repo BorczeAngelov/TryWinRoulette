@@ -19,7 +19,7 @@ namespace Twr_Windows_UI.Component
             get { return (IRouletteRolls)GetValue(RouletteRollsProperty); }
             set { SetValue(RouletteRollsProperty, value); }
         }
-        
+
         public static readonly DependencyProperty RouletteRollsProperty =
             DependencyProperty.Register("RouletteRolls", typeof(IRouletteRolls), typeof(RollsList));
     }

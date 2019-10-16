@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <ItemsControl ItemsSource="{Binding RouletteRolls, RelativeSource={RelativeSource AncestorType=local:RollsList}}"
+        <ItemsControl ItemsSource="{Binding RouletteRolls, RelativeSource={RelativeSource AncestorType=UserControl}}"
                       VirtualizingStackPanel.IsVirtualizing="True"
                       ScrollViewer.CanContentScroll="True">
 
@@ -21,6 +21,7 @@
                 <ControlTemplate>
                     <Border SnapsToDevicePixels="True">
                         <ScrollViewer HorizontalScrollBarVisibility="Visible"
+                                      VerticalScrollBarVisibility="Disabled"
                                       Focusable="False">
                             <ItemsPresenter />
                         </ScrollViewer>
@@ -31,7 +32,7 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Border>
-                        <component:RollTemplate />
+                        <local:RollTemplate />
                     </Border>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

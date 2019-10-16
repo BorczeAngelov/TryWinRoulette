@@ -25,7 +25,8 @@
         </Grid>
 
         <Grid Grid.Row="0">
-            <component:RollsList />            
+            <component:RollsList RouletteRolls="{Binding RouletteRolls}"
+                                 VerticalAlignment="Bottom"/>
         </Grid>
 
         <DockPanel Margin="5"
