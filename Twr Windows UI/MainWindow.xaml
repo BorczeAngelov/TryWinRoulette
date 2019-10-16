@@ -21,39 +21,12 @@
 
         <Grid Grid.RowSpan="2"
               Grid.Column="1">
-            <component:Statistics BasicStatistics="{Binding BasicStatistics}"/>
+            <component:Statistics BasicStatistics="{Binding BasicStatistics}" />
         </Grid>
 
-        <ItemsControl Grid.Row="0"
-                      ItemsSource="{Binding RouletteRolls}"
-                      VirtualizingStackPanel.IsVirtualizing="True"
-                      ScrollViewer.CanContentScroll="True">
-
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel Orientation="Horizontal" />
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-
-            <ItemsControl.Template>
-                <ControlTemplate>
-                    <Border SnapsToDevicePixels="True">
-                        <ScrollViewer HorizontalScrollBarVisibility="Visible"
-                                      Focusable="False">
-                            <ItemsPresenter />
-                        </ScrollViewer>
-                    </Border>
-                </ControlTemplate>
-            </ItemsControl.Template>
-
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Border>
-                        <component:RollTemplate  />
-                    </Border>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        <Grid Grid.Row="0">
+            <component:RollsList />            
+        </Grid>
 
         <DockPanel Margin="5"
                    Grid.Row="2">
